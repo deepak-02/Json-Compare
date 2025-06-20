@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Comparator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Comparator</h1>
+        <div class="input-container">
+            <div class="json-input">
+                <div class="input-header">
+                    <h2 id="json1-title" contenteditable="true">JSON 1</h2>
+                    <button class="prettify-btn" data-target="json1">Prettify</button>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="json1" placeholder="Enter first JSON here..." wrap="off"></textarea>
+                </div>
+            </div>
+            <div class="json-input">
+                <div class="input-header">
+                    <h2 id="json2-title" contenteditable="true">JSON 2</h2>
+                    <button class="prettify-btn" data-target="json2">Prettify</button>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea id="json2" placeholder="Enter second JSON here..." wrap="off"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <label for="key-select">Select comparison key:</label>
+            <div class="select-wrapper">
+                <select id="key-select"></select>
+            </div>
+            <button id="compare-btn">Compare</button>
+        </div>
+        <div id="results-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
