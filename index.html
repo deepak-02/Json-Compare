@@ -33,9 +33,16 @@
             </div>
         </div>
         <div class="controls">
-            <label for="key-select">Select comparison key:</label>
-            <div class="select-wrapper">
+            <label style="margin-right: 10px; display: flex; align-items: center; gap: 8px;">
+                <input type="checkbox" id="multi-key-toggle">
+                Enable multi-key match
+            </label>
+            <div class="select-wrapper" id="single-key-wrapper">
                 <select id="key-select"></select>
+            </div>
+            <div class="select-wrapper" id="multi-key-wrapper" style="display: none; position: relative;">
+                <div id="multi-key-dropdown" class="multi-key-dropdown" tabindex="0" style="min-width: 200px; background: #fff; border: 1px solid #dfe6e9; border-radius: 8px; padding: 8px; display: none; position: absolute; z-index: 10;"></div>
+                <button type="button" id="multi-key-dropdown-btn" style="width: 100%; text-align: left;">Select comparison key(s)</button>
             </div>
             <button id="compare-btn">Compare</button>
         </div>

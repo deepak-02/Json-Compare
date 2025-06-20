@@ -272,4 +272,119 @@ button:active {
 
 /* Remove old .line-numbers styles for input fields */
 .line-numbers { display: none !important; }
-.line-numbers span { display: none !important; } 
+.line-numbers span { display: none !important; }
+
+/* Multi-key dropdown styles */
+.multi-key-dropdown {
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.13);
+    max-height: 220px;
+    overflow-y: auto;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid #dfe6e9;
+    border-radius: 10px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 20;
+    margin-top: 6px;
+    transition: box-shadow 0.2s;
+}
+.multi-key-dropdown label {
+    display: flex;
+    align-items: center;
+    padding: 8px 18px 8px 14px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #34495e;
+    transition: background 0.18s;
+    position: relative;
+    user-select: none;
+}
+.multi-key-dropdown label.selected {
+    background: #eaf6fb;
+}
+/* Remove hover effect for multi-key-dropdown label */
+.multi-key-dropdown label:hover {
+    background: none !important;
+}
+.multi-key-dropdown input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #3498db;
+}
+.multi-key-dropdown label .checkmark {
+    display: none;
+    margin-left: auto;
+    color: #3498db;
+    font-size: 1.1em;
+}
+.multi-key-dropdown label.selected .checkmark {
+    display: inline;
+}
+#multi-key-dropdown-btn {
+    background: #fff;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    padding: 12px 40px 12px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #34495e;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.07);
+    position: relative;
+}
+#multi-key-dropdown-btn:focus {
+    outline: none;
+    border-color: #3498db;
+}
+#multi-key-dropdown-btn::after {
+    content: '\25BC';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #3498db;
+    pointer-events: none;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+.collapse-btn {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 6px 0 0;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    color: #3498db;
+    transition: color 0.2s;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+}
+.collapse-btn:focus, .collapse-btn:hover {
+    color: #217dbb;
+}
+.chevron {
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.22s cubic-bezier(.4,2,.6,1), color 0.2s;
+}
+.collapse-btn .chevron svg {
+    display: block;
+    stroke: #3498db;
+    stroke-width: 2.2;
+    width: 18px;
+    height: 18px;
+}
+.collapse-btn.collapsed .chevron {
+    transform: rotate(-90deg);
+} 
